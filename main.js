@@ -17,13 +17,4 @@ function saveData(){
 //     localStorage.setItem('email',document.getElementById('email').value);
 
 // });
-
-btn.addEventListener("mouseover",(e)=>{
-    e.preventDefault();
-    console.log("");
-});
-
-btn.addEventListener("mouseout",(e)=>{
-    e.preventDefault();
-    console.log("");
-});
+ 

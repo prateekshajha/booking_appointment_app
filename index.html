@@ -25,7 +25,7 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button onclick="displayDetails" type="submit" class="btn btn-primary">Submit</button>
+        <button onclick="saveData" type="submit" class="btn btn-primary">Submit</button>
       </form>
 
       <!-- <script src=”https://code.jquery.com/jquery-3.2.1.slim.min.js” integrity=”sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN” crossorigin=”anonymous”></script>
@@ -45,8 +45,16 @@
           email:email,
           
         };
+        localStorage.removeItem("name  ")
+        myObjJ=JSON.stringify(myObj)
+        localStorage.setItem("myObj",myObjJ);
+        showUserOnScreen(myObjJ)
 
-        localStorage.setItem("myObj",myObj);
+        function showUserOnScreen(obj){
+          const parentElem=document.getElementById('listofitems');
+          const childElem=document.createElement('li')
+          childElem.textContent=obj.name+"-"+obj.email;
+        }
 } 
 </script>
 </div>
