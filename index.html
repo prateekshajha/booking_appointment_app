@@ -35,11 +35,18 @@
       <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js” integrity=”sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl” crossorigin=”anonymous”></script> -->
 
 <script>
-    function displayDetails () {
-        console.log(document.getElementById('username').value);
-        console.log(document.getElementById('email').value);
-        console.log(document.getElementById('phn').value);
-        console.log(document.getElementById('date').value);
+    function saveData () {
+        var username=document.getElementById('username').value;
+        var email= document.getElementById('email').value;
+        
+
+        let myObj={
+          name:username,
+          email:email,
+          
+        };
+
+        localStorage.setItem("myObj",myObj);
 } 
 </script>
 </div>
